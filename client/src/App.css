@@ -1,0 +1,121 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Rouge Script", cursive;
+  font-size: 80px;
+}
+
+h2 {
+  font-family: "Rouge Script", cursive;
+  margin-top: 80px;
+  color: #756adc;
+  font-style: italic;
+  font-size: 35px;
+}
+
+h2:hover{
+  color: rgb(66, 0, 121);
+}
+
+p{
+  font-size: 25px;
+}
+.form-fields {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(245, 253, 123);
+  text-decoration: underline;
+  font-family: "Rouge Script", cursive;
+  font-size: 20px;
+}
+
+.form-fields2 {
+  color: rgb(8, 8, 8);
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(245, 253, 123);
+  text-decoration: underline;
+  font-family: "Rouge Script", cursive;
+  font-size:25px
+}
+
+.submit-btn {
+  background-color: rgb(56, 92, 126);
+  color: rgb(0, 63, 47);
+  padding: 5px;
+  width: 140px;
+  font-family: "Rouge Script", cursive;
+}
+
+.submit-btn:hover {
+  background-color: rgb(43, 255, 0);
+
+}
+
+.displayOne-page {
+  padding: 35px;
+  text-align: center;
+  border-style: double;
+  border-color: rgb(255, 255, 255);
+}
+
+.displayOne-header {
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  font-family: "Rouge Script", cursive;
+  font-size: 50px;
+}
+
+th {
+  background-color: #3b3b3b;
+  font-family: "Rouge Script", cursive;
+  font-size: 50px;
+}
+
+button {
+  background-color: #f09896;
+  color: rgb(255, 255, 255);
+  padding: 15px 15px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  margin: 5px 5px 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  font-family: "Rouge Script", cursive;
+  font-size: 26px;
+}
+
+button:hover {
+  background-color: #35c47c;
+  color: rgb(0, 0, 0);
+}
+
+img{
+  height: 100%;
+  width: 100%;
+  margin: -25%
+}
