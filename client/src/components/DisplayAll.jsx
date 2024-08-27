@@ -25,7 +25,7 @@ const DisplayAll = ({ storyList = [], setStoryList }) => {
                             <th>Title</th>
                             <th>Author</th>
                             <th>Synopsis</th>
-                            <th>Story</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,7 +36,10 @@ const DisplayAll = ({ storyList = [], setStoryList }) => {
                                 </td>
                                 <td>
                                     <p>{story.author}</p>
-                                    </td>
+                                </td>
+                                <td>
+                                    <p>{story.synopsis}</p>
+                                </td>
                                 <td>
                                     <Link to={`/story/${story._id}/edit`}>
                                     <button className='optionbttns special-btn edit-btn'>Edit</button>
