@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import BackgroundWrapper from '../components/BackgroundWrapper'; // Adjust the path if needed
+import editStoryBackground from '../assets/edit_img.webp'; // Update with the correct path to your background image
 
-const UpdateRecipe = (props) => {
+const UpdateStory = (props) => {
     const { id } = useParams(); 
 
     const [title, setTitle] = useState("");
@@ -33,7 +35,7 @@ const UpdateRecipe = (props) => {
         if (title.length < 3) validationErrors.title = "Title must be at least 3 characters long";
         if (author.length < 2) validationErrors.author = "Title must be at least 2 characters long";
         if (synopsis.length < 25) validationErrors.synopsis = "Synopsis must be at least 25 characters long";
-        if (storyText.length < 25) validationErrors.storyText = "Story text must be at least 50 characters long";
+        if (storyText.length < 50) validationErrors.storyText = "Story text must be at least 50 characters long";
 
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
@@ -56,8 +58,8 @@ const UpdateRecipe = (props) => {
     }
 
     return (
-        <div>
-            <button onClick={() => navigate(`/findOneStory/${id}`)}>Story Details</button> 
+        <BackgroundWrapper backgroundImage={editStoryBackground}>
+            <button onClick={() => navigate(`/story/${id}`)}>Story Details</button> 
             <h2>Edit your story</h2>
             <form onSubmit={submitHandler}>
                 <div className='form-fields'>
@@ -97,8 +99,8 @@ const UpdateRecipe = (props) => {
                 </div>
                 <button type="submit" className='submit-btn'>Update story!</button>
             </form>
-        </div>
+        </BackgroundWrapper>
     )
 }
 
-export default UpdateRecipe;
+export default UpdateStory;

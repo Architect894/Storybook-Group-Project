@@ -13,29 +13,28 @@ h1 {
 h2 {
   font-family: "Rouge Script", cursive;
   margin-top: 80px;
-  color: #756adc;
+  color: #d36adc;
   font-style: italic;
-  font-size: 35px;
+  font-size: 50px;
+  background-color: rgba(0, 10, 10, 0.76);
 }
 
-h2:hover{
-  color: rgb(66, 0, 121);
-}
 
 p{
-  font-size: 25px;
+  font-size: 35px;
+  background-color: rgba(0, 10, 10, 0.76);
 }
 .form-fields {
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
-  width: 280px;
+  width: 300px;
   margin: auto;
   padding: 20px;
-  background-color: rgb(245, 253, 123);
+  background-color: rgb(108, 175, 158);
   text-decoration: underline;
-  font-family: "Rouge Script", cursive;
-  font-size: 20px;
+  font-family: "Rouge Script";
+  font-size: 30px;
 }
 
 .form-fields2 {
@@ -45,22 +44,23 @@ p{
   width: 280px;
   margin: auto;
   padding: 20px;
-  background-color: rgb(245, 253, 123);
+  background-color: rgb(108, 175, 158);
   text-decoration: underline;
-  font-family: "Rouge Script", cursive;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size:25px
 }
 
 .submit-btn {
-  background-color: rgb(56, 92, 126);
+  background-color: #d36adc;
   color: rgb(0, 63, 47);
   padding: 5px;
   width: 140px;
-  font-family: "Rouge Script", cursive;
+  font-family: "Rouge Script";
 }
 
 .submit-btn:hover {
-  background-color: rgb(43, 255, 0);
+  background-color: rgb(119, 2, 80);
+  color: #e9b5ee;
 
 }
 
@@ -69,10 +69,66 @@ p{
   text-align: center;
   border-style: double;
   border-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .displayOne-header {
   margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-header {
+  font-size: 30px;
+}
+
+.image-choices-container {
+  display: flex;
+  margin: 0 0 2.5rem 0;
+}
+
+.flex-container-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+}
+
+.pexelsImage {
+  height: 80%;
+  width: 80%;
+  display: inline-block;
+  margin: 1.5rem 0 .25rem 0;
+}
+
+.pexels-image-display-one {
+  height: 350px;
+  width: 350px;;
+}
+
+.blockform {
+  display: block
+}
+
+button.image-btn {
+  width: 150px;
+  height: auto;
+  padding: 5px; 
+  font-size: 20px; 
+}
+
+.fairy-img{
+  height: 100%;
+  width: 100%;
+  margin: -25%
 }
 
 table {
@@ -86,6 +142,7 @@ th, td {
   text-align: left;
   font-family: "Rouge Script", cursive;
   font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
 th {
@@ -95,18 +152,18 @@ th {
 }
 
 button {
-  background-color: #f09896;
-  color: rgb(255, 255, 255);
-  padding: 15px 15px;
+  background-color: #96f0c3;
+  color: rgb(17, 17, 17);
+  padding: 5px 25px;
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 100%;
+  font-size: 115%;
   margin: 5px 5px 5px 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   height: 50px;
   font-family: "Rouge Script", cursive;
-  font-size: 26px;
+  font-size: 36px;
 }
 
 button:hover {
@@ -114,8 +171,14 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
-img{
-  height: 100%;
-  width: 100%;
-  margin: -25%
+.layout-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.layout-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10%;
 }
