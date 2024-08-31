@@ -26,7 +26,6 @@ export const findOneStory = (req, res) => {
 
 // Create
 export const createStory = (req, res) => {
-    console.log(req.body); 
     Story.create(req.body)
         .then((newStory) => {
             res.status(201).json(newStory); 

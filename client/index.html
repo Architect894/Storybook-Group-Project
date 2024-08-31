@@ -4,13 +4,58 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speedy Meals</title>
+    <title>Storybook</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+  
+    <style>
+      .centerbutt {
+        text-align: center;
+        padding-top: 50px;
+      }
+
+    </style>
+
   </head>
   <body>
+
+    <!-- <audio src="/src/assets/Storybook_Song.wav" autoplay></audio> -->
+    <!-- <iframe src="/src/assets/Storybook_Song.wav" allow="autoplay"></iframe> -->
+
+    <div class="centerbutt">
+      <div>
+        <button onclick="toggleAudio()">music</button>
+      </div>
+      <!-- <div>
+        <audio controls autoplay>
+          <source src="/src/assets/Storybook_Song.wav">
+        </audio>
+      </div> -->
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    
+
+
+    <script>
+   
+      var audio = new Audio("/src/assets/Storybook_Song.wav");
+
+      function toggleAudio() {
+      
+     
+      if (audio.paused) {
+        audio.play();
+        
+      } else {
+        audio.pause();
+        audio.currentTime = 0; // Reset the audio to the beginning
+      }
+    }
+    //audio.play();
+    </script>
   </body>
 </html>

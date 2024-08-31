@@ -6,10 +6,10 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <h1>Speedy Meals</h1>
+            <h1>Storybook</h1>
             <nav>
                 <button onClick={() => navigate('/')}>Back to home</button>
-                <button onClick={() => navigate('/create')}>Add Recipe!</button>
+                <button onClick={() => navigate('/create')}>Add Story!</button>
             </nav>
             <div>
                 {children}

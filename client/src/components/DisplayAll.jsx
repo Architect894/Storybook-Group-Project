@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import BackgroundWrapper from './BackgroundWrapper'; // Import the BackgroundWrapper component
+import fairyImage from '../assets/home-background.webp'
 
 const DisplayAll = ({ storyList = [], setStoryList }) => {
     const navigate = useNavigate();
+
     useEffect(() => {
         axios.get("http://localhost:9999/api/findAllStories")
             .then((res) => {
@@ -15,9 +18,9 @@ const DisplayAll = ({ storyList = [], setStoryList }) => {
     }, [setStoryList]);
 
     return (
-        <div>
+        <BackgroundWrapper backgroundImage={fairyImage}>
+            <h2>May whimsical winds and charitable bells guide you along these stories!</h2>
             <button onClick={() => navigate('/create')}>Add a story!</button>
-            <h2>Let whimsical winds and charitable bells guide you through these stories!</h2>
             {storyList.length > 0 ? (
                 <table>
                     <thead>
@@ -31,21 +34,15 @@ const DisplayAll = ({ storyList = [], setStoryList }) => {
                     <tbody>
                         {storyList.map((story) => (
                             <tr key={story._id}>
-                                <td>
-                                    <p>{story.title}</p>
-                                </td>
-                                <td>
-                                    <p>{story.author}</p>
-                                </td>
-                                <td>
-                                    <p>{story.synopsis}</p>
-                                </td>
+                                <td><p>{story.title}</p></td>
+                                <td><p>{story.author}</p></td>
+                                <td><p>{story.synopsis}</p></td>
                                 <td>
                                     <Link to={`/story/${story._id}/edit`}>
-                                    <button className='optionbttns special-btn edit-btn'>Edit</button>
+                                        <button className='optionbttns special-btn edit-btn'>Edit</button>
                                     </Link>
                                     <Link to={`/story/${story._id}`}>
-                                    <button className='optionbttns special-btn details-btn'>Details</button>
+                                        <button className='optionbttns special-btn details-btn'>Details</button>
                                     </Link>
                                 </td>
                             </tr>
@@ -55,7 +52,7 @@ const DisplayAll = ({ storyList = [], setStoryList }) => {
             ) : (
                 <p>No books a' writin.</p>
             )}
-        </div>
+        </BackgroundWrapper>
     );
 };
 
