@@ -44,17 +44,18 @@
    
       var audio = new Audio("/src/assets/Storybook_Song.flac");
 
+      audio.loop = true;
+
       function toggleAudio() {
-      
-     
-      if (audio.paused) {
-        audio.play();
+
+        if (audio.paused) {
+          audio.play();
         
-      } else {
-        audio.pause();
-        audio.currentTime = 0; // Reset the audio to the beginning
+        } else {
+          audio.pause();
+          audio.currentTime = 0; // Reset the audio to the beginning
+        }
       }
-    }
     //audio.play();
     </script>
   </body>
