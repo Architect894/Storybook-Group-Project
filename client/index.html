@@ -1,16 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Storybook</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storybook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rouge Script', cursive;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .soundwave {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 250px;
+      height: 250px;
+      background: url('https://media.giphy.com/media/l4FUiYuju9ZhKlVr5j/giphy.gif') no-repeat center;
+      background-size: cover;
+      z-index: 999;
+      border-radius: 50%;
+    }
+
+    .fixed-button {
+      position: fixed;
+      top: 119px;
+      right: 119px;
+      background-color: #01060c;
+      border-radius: 50%;
+      color: #2c89f3;
+      cursor: pointer;
+      text-align: center;
+      z-index: 1000;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .fixed-button:hover{
+      background-color: #071729;
+    }
+
+    .fixed-button::before {
+      content: '\25B6'; /* Unicode for play symbol */
+    }
+
+    .fixed-button.paused::before {
+      content: '\23F8'; /* Unicode for pause symbol */
+      font-size: 20px;
+      top: 20px;
+    }
+    #root {
+      padding-top: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="soundwave"></div>
+
+  <div class="fixed-button" id="playPauseButton" onclick="toggleAudio()"></div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <script>
+    var audio = new Audio("/src/assets/Storybook_Song.flac");
+    audio.loop = true;
+
+    function toggleAudio() {
+      var button = document.getElementById("playPauseButton");
+      if (audio.paused) {
+        audio.play();
+        button.classList.add("paused"); // Switch to pause symbol
+      } else {
+        audio.pause();
+        audio.currentTime = 0; // Reset the audio to the beginning
+        button.classList.remove("paused"); // Switch back to play symbol
+      }
+    }
+  </script>
+</body>
+
 </html>
