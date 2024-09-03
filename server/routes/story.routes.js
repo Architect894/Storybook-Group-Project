@@ -11,19 +11,19 @@ const storyRouter = Router()
 //     app.delete('/api/deleteStory/:id', deleteStory);
 // }
 
-storyRouter.route('/createStory')
+storyRouter.route('/api/createStory')
     .post(createStory)
 
-storyRouter.route('/findAllStories')
+storyRouter.route('/api/findAllStories')
     .get(findAllStories)
 
-storyRouter.route('/findOneStory/:id')
+storyRouter.route('/api/findOneStory/:id')
     .get(findOneStory)
 
-storyRouter.route('/updateStory/:id')
+storyRouter.route('/api/updateStory/:id')
     .put(updateStory)
 
-storyRouter.route('/deleteStory/:id')
+storyRouter.route('/api/deleteStory/:id')
     .delete(deleteStory)
 
 
