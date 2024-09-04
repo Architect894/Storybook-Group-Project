@@ -15,21 +15,13 @@ h2 {
   margin-top: 80px;
   color: #d36adc;
   font-style: italic;
-<<<<<<< HEAD
   font-size: 50px;
-=======
-  font-size: 35px;
->>>>>>> 0792f8854c2de57705192fc3e4018aa55cccead1
   background-color: rgba(0, 10, 10, 0.76);
 }
 
 
 p{
-<<<<<<< HEAD
   font-size: 35px;
-=======
-  font-size: 25px;
->>>>>>> 0792f8854c2de57705192fc3e4018aa55cccead1
   background-color: rgba(0, 10, 10, 0.76);
 }
 .form-fields {
@@ -59,11 +51,7 @@ p{
 }
 
 .submit-btn {
-<<<<<<< HEAD
   background-color: #d36adc;
-=======
-  background-color: rgb(94, 145, 192);
->>>>>>> 0792f8854c2de57705192fc3e4018aa55cccead1
   color: rgb(0, 63, 47);
   padding: 5px;
   width: 140px;
