@@ -99,9 +99,12 @@ const CreateStory = (props) => {
                 <div>
                     <h3 className='search-header'>First, search for an image to add to your story (optional):</h3>
                     <form onSubmit={handleSubmitSearch}>
-                        <label htmlFor="imageSearch">Search for an image</label>
-                        <input type="text" name="imageSearch" onChange={handleChangeSearch} />
-                        <input type="submit" value="Search" />
+                        <div className='form-fields-pic-search'>
+                            <label htmlFor="imageSearch">Search for an image</label>
+                            <input type="text" name="imageSearch" onChange={handleChangeSearch}  />
+                            {/* <input type="submit" value="Search" className='pic-search-btn' /> */}
+                            <button type="submit" className='pic-search-btn'>Search</button>
+                        </div>
                     </form>
 
                     {
@@ -157,7 +160,7 @@ const CreateStory = (props) => {
                         <textarea name="storyText" id="storyText" value={storyText} onChange={(e) => setStoryText(e.target.value)} rows="15" cols="30"></textarea>
                         {errors.storyText && <p style={{ color: 'red' }}>{errors.storyText}</p>}
                     </div>
-                    <button type="submit" className='submit-btn'>Create Story!</button>
+                    <button type="submit" className='submit-btn'>Create!</button>
                 </form>
             </div>
         </BackgroundWrapper>

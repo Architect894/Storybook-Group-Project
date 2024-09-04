@@ -48,7 +48,7 @@ const DisplayOneStory = () => {
             <div className='displayOne-page flex-container'>
                 <h2 className='displayOne-header'>{oneStory.title}</h2>
                 <img src={oneStory.imageUrl} className='pexels-image-display-one' />
-                <h4>By: {oneStory.author}</h4>
+                <h4 className='byline'>By: {oneStory.author}</h4>
                 <p>{oneStory.storyText}</p>
                 <button onClick={deleteStory}>Delete</button>
             </div>

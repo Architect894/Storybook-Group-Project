@@ -97,7 +97,7 @@ const UpdateStory = (props) => {
                     <textarea name="storyText" id="storyText" value={storyText} onChange={(e) => setStoryText(e.target.value)}  rows="15" cols="30"></textarea>
                     {errors.storyText && <p style={{ color: 'red' }}>{errors.storyText}</p>}
                 </div>
-                <button type="submit" className='submit-btn'>Update story!</button>
+                <button type="submit" className='submit-btn'>Update!</button>
             </form>
         </BackgroundWrapper>
     )

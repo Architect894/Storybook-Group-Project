@@ -3,14 +3,6 @@ import { Router } from "express"
 
 const storyRouter = Router()
 
-// export default function(app) {
-//     app.get('/api/findAllStories', findAllStories);
-//     app.get('/api/findOneStory/:id', findOneStory);
-//     app.post('/api/createStory', createStory);
-//     app.put('/api/updateStory/:id', updateStory);
-//     app.delete('/api/deleteStory/:id', deleteStory);
-// }
-
 storyRouter.route('/createStory')
     .post(createStory)
 
