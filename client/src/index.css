@@ -1,0 +1,71 @@
+:root { 
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #dc6ad6;
+  background-color: #061117;
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rouge Script', cursive;
+  background-color: #000;
+  color: #fff;
+}
+
+.soundwave {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  height: 250px;
+  background: url('https://media.giphy.com/media/l4FUiYuju9ZhKlVr5j/giphy.gif') no-repeat center;
+  background-size: cover;
+  z-index: 999;
+  border-radius: 50%;
+}
+
+.fixed-button {
+  position: fixed;
+  top: 119px;
+  right: 119px;
+  background-color: #01060c;
+  border-radius: 50%;
+  color: #2c89f3;
+  cursor: pointer;
+  text-align: center;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.fixed-button:hover {
+  background-color: #071729;
+}
+
+.fixed-button::before {
+  content: '\25B6'; /* Unicode for play symbol */
+}
+
+.fixed-button.paused::before {
+  content: '\23F8'; /* Unicode for pause symbol */
+  font-size: 20px;
+}
+
+#root {
+  padding-top: 200px;
+}

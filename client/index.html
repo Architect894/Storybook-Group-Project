@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storybook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="soundwave"></div>
+
+  <div class="fixed-button" id="playPauseButton" onclick="toggleAudio()"></div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <script>
+    var audio = new Audio("/src/assets/Storybook_Song.flac");
+    audio.loop = true;
+
+    function toggleAudio() {
+      var button = document.getElementById("playPauseButton");
+      if (audio.paused) {
+        audio.play();
+        button.classList.add("paused"); // Switch to pause symbol
+      } else {
+        audio.pause();
+        audio.currentTime = 0; // Reset the audio to the beginning
+        button.classList.remove("paused"); // Switch back to play symbol
+      }
+    }
+  </script>
+</body>
+
+</html>
